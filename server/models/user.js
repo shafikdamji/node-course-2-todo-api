@@ -74,10 +74,6 @@ UserSchema.statics.findByToken = function (token) {
 		
 	}
 
-	console.log('I am here');
-	console.log(decoded._id);
-	console.log(token);
-	
 	return User.findOne({
 		'_id': decoded._id,
 		"tokens.token" : token,
